@@ -1,0 +1,10 @@
+# Script: auto_report.ps1
+# Tac gia: Chu Gia Huy
+# Ngay tao: 15/10/2026
+
+Write-Host "Dang loc log ... "
+
+"=== BAO CAO LOI === ">HOAN_THIEN
+Get-Content .\logs\member.log | Select-String "ERROR">> .\log\auto_report.txt
+
+Write-Host "Hoan thanh!"
